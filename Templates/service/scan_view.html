@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+    {% block content %}
+    {% comment %} <div class="content"><br>
+        <h4><u>IMAGE </u>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <u>RESULT</u></h4><br>
+        {% for i in s %}
+            <img src="{{i.image.url}}" width='200' height='200'>
+            <b>: {{i.snum}}</b><br><br>
+        {% endfor %}
+        
+    </div> {% endcomment %}
+    <h5 align='center'><b><u>SCANNED DATA</u></b></h5>
+        <table class="table">
+            <thead class="text-light bg-dark">
+                <tr>
+                    <th scope="col">SL NO.</th>
+                    <th scope="col">IMAGE</th>
+                    <th scope="col">RESULT</th>
+                    <th scope='col'>Delete</th>
+                
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in s %}
+                    
+                
+                <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td><img src="{{i.image.url}}" width='200' height='200'></td>
+                    <td>{{i.snum}}</td>
+                    <td><a class="btn btn-info" href="{% url 'delete' %}?id={{i.pk}}">Delete</a></td>
+                    
+                    
+                    
+                </tr>
+                {% endfor%}
+            </tbody>
+        </table> 
+        
+    {% endblock %}
+

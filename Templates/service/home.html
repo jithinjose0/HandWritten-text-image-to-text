@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css'%}">    
+    
+    
+</head>
+<body>
+    <header>
+    <div class="wrapper">
+        <div class="logo">
+            
+            <br><i class="fas fa-shapes fa-2x mt-1 tm-logo" style="color:white;font-size:20px;"> SCANBILLS</i>
+            {% comment %} <img src="static/images/SB.png" alt="" width='80px' height='80px'> {% endcomment %}
+        </div>
+<ul class="nav-area">
+<li><a href="{% url 'home' %}">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="{% url 'service_login' %}">Login</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+<div class="welcome-text">
+        <h1>
+Don't Waste Your <span>Time</span></h1>
+<a href="{% url 'service_login' %}">Let's Start</a>
+    </div>
+</header>
+
+</body>
+</html>
