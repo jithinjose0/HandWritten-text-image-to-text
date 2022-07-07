@@ -21,17 +21,25 @@ Read about virtualenv in Python. Create a virtual environment for your project.
       pip install virtualenv
       virtualenv virtualenv_name
 Activate the environment in cmd.
-      virtualenv_name\scripts\activate
+
+    virtualenv_name\scripts\activate
 
 Run the command in console pip install -r requirements.txt go to that directory and run the above command. 
 This command will install the necessary packages required to run the project.
-      pip install -r requirements.txt
+
+    pip install -r requirements.txt
+    
 Go the the directory where manage.py file is present. Run following commands in the cmd
-      python manage.py makemigrations
-      python manage.py migrate
-      python manage.py runserver 8080
-See your project is running on your local host http://127.0.0.1:8080
-http://127.0.0.1:8080
+
+    python manage.py makemigrations
+    
+    python manage.py migrate
+    
+    python manage.py runserver 8080
+    
+See your project is running on your local host 
+
+    http://127.0.0.1:8080
   
 # Screenshots
 ![Screenshot (84)](https://user-images.githubusercontent.com/90469268/177712418-16206de1-a841-480d-8893-69b58e391ee0.png)
